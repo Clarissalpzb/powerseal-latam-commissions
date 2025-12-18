@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* FreshBooks inspired button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply btn bg-white text-secondary-700 border border-secondary-300 hover:bg-secondary-50 focus:ring-secondary-500;
+}
+
+.btn-success {
+  @apply btn bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-warning {
+  @apply btn bg-warning-600 text-white hover:bg-warning-700 focus:ring-warning-500;
+}
+
+.btn-danger {
+  @apply btn bg-error-600 text-white hover:bg-error-700 focus:ring-error-500;
+}
+
+.input {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-150 bg-white;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200;
+}
+
+.status-badge {
+  @apply px-3 py-2 text-xs font-bold rounded-full;
+}
+
+.status-pending {
+  @apply status-badge bg-accent-100 text-accent-800 border border-accent-200;
+}
+
+.status-approved {
+  @apply status-badge bg-success-100 text-success-800 border border-success-200;
+}
+
+.status-rejected {
+  @apply status-badge bg-error-100 text-error-800 border border-error-200;
+}
+
+.status-paid {
+  @apply status-badge bg-primary-100 text-primary-800 border border-primary-200;
+}
+
+.status-flagged {
+  @apply status-badge bg-warning-100 text-warning-800 border border-warning-200;
+}
+
+/* Clean backgrounds */
+.freshbooks-bg {
+  @apply bg-gray-50;
+}
+
+.freshbooks-primary-gradient {
+  @apply bg-primary-600;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #22c55e;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
