@@ -112,7 +112,7 @@ const ActionsMenu = ({
               <div className="py-1">
                 {canEdit && (
                   <Menu.Item>
-                    {({ active }) => (
+                    {({ active }: { active: boolean }) => (
                       <button
                         onClick={onEdit}
                         className={`${
@@ -132,7 +132,7 @@ const ActionsMenu = ({
                   <>
                     {canEdit && <div className="border-t border-gray-100"></div>}
                     <Menu.Item>
-                      {({ active }) => (
+                      {({ active }: { active: boolean }) => (
                         <button
                           onClick={onDelete}
                           disabled={isDeleting}

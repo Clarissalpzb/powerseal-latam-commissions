@@ -74,24 +74,6 @@ const SubmissionsList = ({ showFilters = true, submissions }: SubmissionsListPro
     setFilteredSubmissions(filtered);
   }, [displaySubmissions, statusFilter, salespersonFilter, searchTerm, showFilters]);
 
-  const getStatusBadge = (status: CommissionSubmission['status']) => {
-    const badges = {
-      pending: { class: 'status-pending', text: 'Pendiente' },
-      under_review: { class: 'status-pending', text: 'En Revisión' },
-      flagged: { class: 'status-flagged', text: 'Señalado' },
-      approved: { class: 'status-approved', text: 'Aprobado' },
-      rejected: { class: 'status-rejected', text: 'Rechazado' },
-      paid: { class: 'status-paid', text: 'Pagado' },
-    };
-    
-    const badge = badges[status];
-    return (
-      <span className={badge.class}>
-        {badge.text}
-      </span>
-    );
-  };
-
   const getStatusCounts = () => {
     const counts = {
       all: displaySubmissions.length,
