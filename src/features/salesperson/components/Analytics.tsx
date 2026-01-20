@@ -121,7 +121,7 @@ const Analytics = () => {
             <dl>
               <dt className="text-sm font-medium text-gray-500 truncate">{title}</dt>
               <dd>
-                <div className="text-xl font-semibold text-gray-900">{value}</div>
+                <div className="text-xl font-medium text-gray-800">{value}</div>
                 {subvalue && <div className="text-sm text-gray-500">{subvalue}</div>}
               </dd>
             </dl>
@@ -134,7 +134,7 @@ const Analytics = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-gray-900">Análisis de Rendimiento</h2>
+        <h2 className="text-xl font-medium text-gray-800">Análisis de Rendimiento</h2>
         <p className="text-sm text-gray-500">Tu rendimiento de comisiones y estadísticas detalladas</p>
       </div>
 
@@ -174,7 +174,7 @@ const Analytics = () => {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <div className="card p-6">
-            <h3 className="text-lg font-medium text-gray-900 mb-6">Tendencia Mensual</h3>
+            <h3 className="text-lg font-medium text-gray-800 mb-6">Tendencia Mensual</h3>
             <div className="space-y-4">
               {analytics.monthlyData.map((month, idx) => {
                 const maxCommissions = Math.max(...analytics.monthlyData.map(m => m.commissions));
@@ -203,7 +203,7 @@ const Analytics = () => {
         </div>
         
         <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Desglose de Comisiones</h3>
+          <h3 className="text-lg font-medium text-gray-800 mb-4">Desglose de Comisiones</h3>
           <div className="space-y-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center">
@@ -277,7 +277,7 @@ const Analytics = () => {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Performance Insights */}
         <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Insights de Rendimiento</h3>
+          <h3 className="text-lg font-medium text-gray-800 mb-4">Insights de Rendimiento</h3>
           <div className="space-y-4">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="flex items-start">
@@ -350,7 +350,7 @@ const Analytics = () => {
 
         {/* Recent Activity */}
         <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Actividad Reciente</h3>
+          <h3 className="text-lg font-medium text-gray-800 mb-4">Actividad Reciente</h3>
           <div className="flow-root">
             <ul className="-mb-8">
               {recentSubmissions.map((submission, idx) => (

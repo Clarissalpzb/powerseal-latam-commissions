@@ -17,7 +17,7 @@ const ManagerDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div>
-              <h1 className="text-xl font-semibold text-gray-900">CommissionHub - Manager</h1>
+              <h1 className="text-xl font-medium text-gray-800">CommissionHub - Manager</h1>
               <p className="text-sm text-gray-500">Welcome, {user?.full_name}</p>
             </div>
             <div className="flex items-center space-x-4">
@@ -95,7 +95,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg font-medium text-gray-900">Manager Dashboard</h2>
+        <h2 className="text-lg font-medium text-gray-800">Manager Dashboard</h2>
         <p className="text-sm text-gray-500">Manage commissions, users, and review submissions</p>
       </div>
 
@@ -112,7 +112,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
             <div className="ml-5 w-0 flex-1">
               <dl>
                 <dt className="text-sm font-medium text-gray-500 truncate">Pending Review</dt>
-                <dd className="text-lg font-medium text-gray-900">{stats.pendingReview}</dd>
+                <dd className="text-lg font-medium text-gray-800">{stats.pendingReview}</dd>
               </dl>
             </div>
           </div>
@@ -130,7 +130,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
             <div className="ml-5 w-0 flex-1">
               <dl>
                 <dt className="text-sm font-medium text-gray-500 truncate">Flagged</dt>
-                <dd className="text-lg font-medium text-gray-900">{stats.flagged}</dd>
+                <dd className="text-lg font-medium text-gray-800">{stats.flagged}</dd>
               </dl>
             </div>
           </div>
@@ -148,7 +148,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
             <div className="ml-5 w-0 flex-1">
               <dl>
                 <dt className="text-sm font-medium text-gray-500 truncate">Approved Today</dt>
-                <dd className="text-lg font-medium text-gray-900">{stats.approvedToday}</dd>
+                <dd className="text-lg font-medium text-gray-800">{stats.approvedToday}</dd>
               </dl>
             </div>
           </div>
@@ -166,7 +166,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
             <div className="ml-5 w-0 flex-1">
               <dl>
                 <dt className="text-sm font-medium text-gray-500 truncate">Total Payouts</dt>
-                <dd className="text-lg font-medium text-gray-900">{formatCurrency(stats.totalPayouts)}</dd>
+                <dd className="text-lg font-medium text-gray-800">{formatCurrency(stats.totalPayouts)}</dd>
               </dl>
             </div>
           </div>
@@ -175,7 +175,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Recent Submissions</h3>
+          <h3 className="text-lg font-medium text-gray-800 mb-4">Recent Submissions</h3>
           <div className="space-y-3">
             {recentSubmissions.length > 0 ? recentSubmissions.map((submission) => (
               <div key={submission.id} className="flex items-center justify-between p-3 bg-gray-50 rounded">
@@ -208,7 +208,7 @@ const ManagerOverview = ({ setActiveTab }: { setActiveTab: (tab: 'overview' | 's
         </div>
 
         <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
+          <h3 className="text-lg font-medium text-gray-800 mb-4">Quick Actions</h3>
           <div className="space-y-3">
             <button 
               onClick={() => setActiveTab('submissions')}
