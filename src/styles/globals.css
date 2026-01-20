@@ -4,8 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+/* Lighter typography base styles */
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply text-secondary-600 font-normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium text-secondary-800;
+  }
+
+  h1 {
+    @apply text-2xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply text-secondary-500 leading-relaxed;
+  }
 }
 
 /* FreshBooks inspired button styles */
@@ -42,7 +66,7 @@ body {
 }
 
 .status-badge {
-  @apply px-3 py-2 text-xs font-bold rounded-full;
+  @apply px-3 py-2 text-xs font-medium rounded-full;
 }
 
 .status-pending {
